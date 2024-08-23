@@ -8,7 +8,7 @@ import edu.alexey.editor3d.entities.Texture;
 /**
  * Интерфейс Business Logic Layer
  */
-public interface BusinessLogicLayer {
+public interface BusinessLogic {
 
 	Collection<Model3D> getAllModels();
 

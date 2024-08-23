@@ -3,7 +3,7 @@ package edu.alexey.editor3d.ui;
 /**
  * Интерфейс UI
  */
-public interface UiLayer {
+public interface UiController {
 
 	void openProject(String filename);
 

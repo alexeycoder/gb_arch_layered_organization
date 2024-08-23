@@ -10,11 +10,11 @@ import edu.alexey.editor3d.entities.Texture;
 /**
  * Реализация Business Logic Layer
  */
-public class EditorBusinessLogicLayer implements BusinessLogicLayer {
+public class EditorBusinessLogic implements BusinessLogic {
 
 	private final DatabaseAccess databaseAccess;
 
-	public EditorBusinessLogicLayer(DatabaseAccess databaseAccess) {
+	public EditorBusinessLogic(DatabaseAccess databaseAccess) {
 		this.databaseAccess = databaseAccess;
 	}
 

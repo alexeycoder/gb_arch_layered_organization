@@ -2,8 +2,8 @@ package edu.alexey.editor3d.ui;
 
 import java.util.Collection;
 
-import edu.alexey.editor3d.business.BusinessLogicLayer;
-import edu.alexey.editor3d.business.EditorBusinessLogicLayer;
+import edu.alexey.editor3d.business.BusinessLogic;
+import edu.alexey.editor3d.business.EditorBusinessLogic;
 import edu.alexey.editor3d.dac.DatabaseAccess;
 import edu.alexey.editor3d.dac.EditorDatabaseAccess;
 import edu.alexey.editor3d.db.Database;
@@ -12,11 +12,11 @@ import edu.alexey.editor3d.entities.Model3D;
 import edu.alexey.editor3d.entities.ProjectFile;
 import edu.alexey.editor3d.entities.Texture;
 
-public class Editor3D implements UiLayer {
+public class Editor3D implements UiController {
 
 	private Database database;
 	private DatabaseAccess databaseAccess;
-	private BusinessLogicLayer businessLogic;
+	private BusinessLogic businessLogic;
 	private ProjectFile projectFile;
 
 	public Editor3D() {
@@ -33,7 +33,7 @@ public class Editor3D implements UiLayer {
 	private void initialize() {
 		database = new EditorDatabase(projectFile);
 		databaseAccess = new EditorDatabaseAccess(database);
-		businessLogic = new EditorBusinessLogicLayer(databaseAccess);
+		businessLogic = new EditorBusinessLogic(databaseAccess);
 	}
 
 	@Override

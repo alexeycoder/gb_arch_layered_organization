@@ -4,6 +4,7 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 import edu.alexey.editor3d.ui.Editor3D;
+import edu.alexey.editor3d.ui.UiController;
 
 /**
  * Необходимо разделить на горизонтальные уровни "Редактор 3D графики". Один
@@ -25,7 +26,7 @@ public class App {
 
 	public static void main(String[] args) {
 
-		Editor3D editor3d = new Editor3D();
+		UiController editor3d = new Editor3D();
 
 		while (true) {
 
@@ -62,7 +63,7 @@ public class App {
 		System.out.print("Выберите пункт меню: ");
 	}
 
-	private static boolean performTask(Editor3D editor3d, int key) {
+	private static boolean performTask(UiController editor3d, int key) {
 
 		System.out.println();
 
@@ -72,7 +73,7 @@ public class App {
 			return false;
 		}
 		case 1: {
-			System.out.println("Введите имя файла проекта: ");
+			System.out.println("Введите имя файла проекта (любое для теста): ");
 			String filename = SCANNER.nextLine();
 			editor3d.openProject(filename);
 			return true;
